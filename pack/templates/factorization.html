@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+    Factoring Algorithm
+{% endblock %}
+
+{% block content %}
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    TeX: {
+        equationNumbers: {  autoNumber: "AMS"  },
+        extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+    }
+    });
+</script>
+<script type="text/javascript"
+ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+    <h1>Factoring Algorithm Using Divisibilty Rules</h1>
+    <div class = "content">
+        <p>
+            As the title says, this program factors a number less than 1,000,000 using the divisibilty rules. Input a number less than a million and the prime factorization will be computed.
+        </p>
+        <p>\( {{num}} = {{fac}} \)</p>
+        <a href="{{ url_for('factor') }}">Return</a>
+    </div>
+{% endblock %}

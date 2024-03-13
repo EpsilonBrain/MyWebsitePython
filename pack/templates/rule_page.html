@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+    Division Rule Generator
+{% endblock %}
+
+{% block content %}
+    <h1>Division Rule Generator</h1>
+    <div class = "content">
+        <p>
+            This generates the divisibility rule for any number. In school, we learned a simple one, if the sum of the digits is divisible by three then the number is divisible by three.
+            As it turns out, there is a rule like this for every number. They are often not as nice as the one for three unfortunately. Upon completing this rule generator,
+            I was able to write a factoring algorithm using these divisibility rules. You can find it <a href="{{ url_for('factor') }}">here</a>.
+        </p>
+        <p1>
+        {% for para in str %}
+            <p> {{para}} </p>
+        {% endfor %}
+            <a href="{{ url_for('div_rule') }}">Return</a>
+        </p1>
+    </div>
+{% endblock %}

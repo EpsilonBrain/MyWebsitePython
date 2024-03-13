@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+    Pablo Rodriguez's Personal Website
+{% endblock %}
+{% block content %}
+    <h1>Pablo Rodriguez MS.</h1>
+    <h4>Math Enthusiast</h4>
+    <h6>Currently a High School Teacher</h6>
+    <p>
+        Welcome to my personal website. To prospective employers, I am most proud of my <a href="{{ url_for('div_rule') }}">Divisibility Rule Generator</a>.
+        This generates the divisbility rule for any number. I am currently working on a program that can solve a
+        <a href="https://www.puzzle-nonograms.com/?size=3">nonogram puzzle.</a> The code for this can be found in my <a href="https://github.com/EpsilonBrain">github</a>.
+    </p>
+    <p1>
+        Here are some useful links <br>
+        <!-- <a href="url">Random Projects</a><br> -->
+        <a href="{{ url_for('cv') }}">Resume</a><br>
+        <a href="https://github.com/EpsilonBrain">Github</a><br>
+        <a href="https://www.linkedin.com/in/pablo-miguel-rodriguez-98414a231/">LinkedIn</a><br>
+        <!-- <a href="{{ url_for('non_page') }}">Nonogram Solver</a><br> -->
+        <a href="{{ url_for('div_rule') }}">Divisibility Rule Generator</a><br>
+        <a href="{{ url_for('factor') }}">Factoring Algorithm</a><br>
+        <a href="https://scholarsarchive.byu.edu/etd/9342/">Pentagonal Extensions of the Rationals Ramified at a Single Prime (My Thesis)</a>
+    </p1>
+{% endblock %}

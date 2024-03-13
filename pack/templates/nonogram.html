@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+    Nonogram Solver
+{% endblock %}
+
+{% block content %}
+    <h1>Nonogram Solver</h1>
+    <div class = "content">
+        <p>
+            This is where my nonogram solver will go once I have finished it. Currently, it does not do anything as
+            I have not figured out a way to input and display the information nicely. Clicking the generate button will simply reload the page.
+        </p>
+        <form action ="{{ url_for('non_page') }}" method = "POST">
+            <input type = "number" name = "dimension" id = "dimension">
+            <input type = "submit" value = "Generate">
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    Factoring Algorithm
+{% endblock %}
+
+{% block content %}
+    <h1>Factoring Algorithm Using Divisibilty Rules</h1>
+    <div class = "content">
+        <p>
+            As the title says, this program factors a number less than 1,000,000 using the divisibilty rules. Input a number less than a million and the prime factorization will be computed.
+        </p>
+        <form action ="{{ url_for('factor') }}" method = "POST">
+            <input type = "number" name = "number" id = "num">
+            <input type = "submit" value = "Factor">
+        </form>
+    </div>
+{% endblock %}
